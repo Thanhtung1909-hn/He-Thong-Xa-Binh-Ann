@@ -37,7 +37,7 @@ h1{margin-bottom:20px}
 
 <!-- SIDEBAR -->
 <div class="sidebar">
-    <div class="logo">🌿 Bình An</div>
+    <div class="logo">🌿 Cổng Thông tin điện tử xã Bình An</div>
     <ul class="menu">
         <li onclick="showPage('dashboard')" id="btn-dashboard" class="active">📊 Tổng quan</li>
         <li onclick="showPage('syll')" id="btn-syll">🧍 Sơ yếu lý lịch</li>
@@ -69,7 +69,7 @@ h1{margin-bottom:20px}
         <input type="text" placeholder="Mã số riêng">
         <input type="text" placeholder="Họ tên">
         <input type="date">
-        <input type="text" placeholder="Giới tính">
+<input type="text" placeholder="Giới tính">
         <input type="text" placeholder="Nơi sinh">
         <input type="text" placeholder="Quê quán">
         <input type="text" placeholder="Đơn vị công tác">
@@ -164,7 +164,7 @@ function renderLich(){
         <tr>
             <td>${x.ngay}</td>
             <td>${x.nd}</td>
-            <td>${x.gc}</td>
+<td>${x.gc}</td>
             <td class="action-btns">
                 <button class="btn-small" onclick="editLich(${i})">Sửa</button>
                 <button class="btn-small" onclick="deleteLich(${i})">Xóa</button>
@@ -276,7 +276,7 @@ function addKT(){
         ngay: ktNgay.value,
         tt: ktTrangThai.value
     });
-    localStorage.setItem("kt",JSON.stringify(kt));
+localStorage.setItem("kt",JSON.stringify(kt));
     renderKT();
 }
 
