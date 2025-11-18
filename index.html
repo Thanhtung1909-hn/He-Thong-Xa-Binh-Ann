@@ -6,91 +6,28 @@
 <title>Nhóm 4 - Hệ thống điều hành xã Bình An</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 body{background:#f5f7fb;color:#333}
 .container{display:flex;height:100vh}
-.sidebar{
-    width:260px;
-    background:#fff;
-    border-right:1px solid #e7e7e7;
-    padding:20px 0
-}
-.logo{
-    text-align:center;
-    font-size:20px;
-    font-weight:700;
-    margin-bottom:20px;
-}
-.menu li{
-    padding:14px 25px;
-    cursor:pointer;
-    font-size:16px;
-    display:flex;
-    gap:10px;
-    transition:.25s
-}
+.sidebar{width:260px;background:#fff;border-right:1px solid #e7e7e7;padding:20px 0}
+.logo{text-align:center;font-size:22px;font-weight:700;margin-bottom:20px}
+.menu li{padding:14px 25px;cursor:pointer;font-size:17px;display:flex;gap:10px;transition:.25s}
 .menu li:hover{background:#eef4ff}
 .menu li.active{background:#d7e5ff;font-weight:bold}
-.content{
-    flex:1;
-    padding:25px;
-    overflow-y:auto
-}
-h1{margin-bottom:20px;font-size:22px}
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px
-}
-.card{
-    background:#fff;
-    padding:18px;
-    border-radius:16px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.06)
-}
+.content{flex:1;padding:25px;overflow-y:auto}
+h1{margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.card{background:#fff;padding:18px;border-radius:16px;box-shadow:0 3px 10px rgba(0,0,0,0.06)}
 .card:hover{transform:translateY(-2px);transition:.3s}
-.form{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:14px
-}
-.form input,.form select{
-    padding:10px;
-    border:1px solid #ccc;
-    border-radius:12px;
-    background:#fff
-}
-.btn,.btn-small{
-    background:#4c8dff;
-    color:#fff;
-    border:none;
-    border-radius:10px;
-    padding:10px 14px;
-    cursor:pointer
-}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.form input,.form select{padding:10px;border:1px solid #ccc;border-radius:12px;background:#fff}
+.btn,.btn-small{background:#4c8dff;color:#fff;border:none;border-radius:10px;padding:10px 14px;cursor:pointer}
 .btn-small{padding:6px 10px}
-.table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:15px
-}
-.table th,.table td{
-    padding:10px;
-    border-bottom:1px solid #ddd
-}
+.table{width:100%;border-collapse:collapse;margin-top:15px}
+.table th,.table td{padding:10px;border-bottom:1px solid #ddd}
 .page{display:none;opacity:0;transition:.25s}
 .page.active{display:block;opacity:1}
 .action-btns button{margin-right:8px}
-.status{
-    margin-top:8px;
-    font-size:14px;
-    color:#2e7d32;
-}
 </style>
 </head>
 
@@ -98,118 +35,117 @@ h1{margin-bottom:20px;font-size:22px}
 
 <div class="container">
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <div class="logo">🌿 Cổng thông tin Bình An</div>
-        <ul class="menu">
-            <li onclick="showPage('dashboard')" id="btn-dashboard" class="active">📊 Tổng quan</li>
-            <li onclick="showPage('syll')" id="btn-syll">🧍 Sơ yếu lý lịch</li>
-            <li onclick="showPage('daotao')" id="btn-daotao">🎓 Đào tạo</li>
-            <li onclick="showPage('vanban')" id="btn-vanban">📄 Văn bản</li>
-            <li onclick="showPage('lichlam')" id="btn-lichlam">🗓️ Lịch làm việc</li>
-            <li onclick="showPage('khenthuong')" id="btn-khenthuong">🏅 Khen thưởng</li>
-        </ul>
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <div class="logo">🌿Cổng thông tin điện tử xã Bình An</div>
+    <ul class="menu">
+        <li onclick="showPage('dashboard')" id="btn-dashboard" class="active">📊 Tổng quan</li>
+        <li onclick="showPage('syll')" id="btn-syll">🧍 Sơ yếu lý lịch</li>
+        <li onclick="showPage('daotao')" id="btn-daotao">🎓 Đào tạo</li>
+        <li onclick="showPage('vanban')" id="btn-vanban">📄 Văn bản</li>
+        <li onclick="showPage('lichlam')" id="btn-lichlam">🗓️ Lịch làm việc</li>
+        <li onclick="showPage('khenthuong')" id="btn-khenthuong">🏅 Khen thưởng</li>
+    </ul>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="page active">
+    <h1>📊 Tổng quan</h1>
+    <div class="grid">
+        <div class="card">Cán bộ: <b>120</b></div>
+        <div class="card">Văn bản đến: <b>340</b></div>
+        <div class="card">Văn bản đi: <b>180</b></div>
+        <div class="card">Khen thưởng/kỷ luật: <b>50</b></div>
+    </div>
+</section>
+
+<!-- SYLL -->
+<section id="syll" class="page">
+    <h1>🧍 Sơ yếu lý lịch</h1>
+    <div class="form">
+        <input type="text" placeholder="Mã số riêng">
+        <input type="text" placeholder="Họ tên">
+        <input type="date">
+<input type="text" placeholder="Giới tính">
+        <input type="text" placeholder="Nơi sinh">
+        <input type="text" placeholder="Quê quán">
+        <input type="text" placeholder="Đơn vị công tác">
+        <input type="date">
+        <button class="btn">Lưu</button>
+    </div>
+</section>
+
+<!-- ĐÀO TẠO -->
+<section id="daotao" class="page">
+    <h1>🎓 Chương trình đào tạo</h1>
+    <div class="grid">
+        <div class="card">Chuyên viên</div>
+        <div class="card">Cán bộ</div>
+        <div class="card">Cán bộ cao cấp</div>
+    </div>
+</section>
+
+<!-- VĂN BẢN -->
+<section id="vanban" class="page">
+    <h1>📄 Văn bản</h1>
+
+    <div class="form">
+        <select id="vbLoai">
+            <option value="Đến">Đến</option>
+            <option value="Đi">Đi</option>
+        </select>
+        <input id="vbSo" type="text" placeholder="Số hiệu">
+        <input id="vbNgay" type="date">
+        <input id="vbFile" type="text" placeholder="Link PDF (tạm)">
+        <button class="btn" onclick="addVanBan()">Thêm văn bản</button>
     </div>
 
-    <!-- CONTENT -->
-    <div class="content">
+    <table class="table" id="vanbanTable"></table>
+</section>
 
-        <!-- DASHBOARD -->
-        <section id="dashboard" class="page active">
-            <h1>📊 Tổng quan</h1>
-            <div class="grid">
-                <div class="card">Cán bộ: <b>120</b></div>
-<div class="card">Văn bản đến: <b>340</b></div>
-                <div class="card">Văn bản đi: <b>180</b></div>
-                <div class="card">Khen thưởng/kỷ luật: <b>50</b></div>
-            </div>
-        </section>
+<!-- LỊCH LÀM VIỆC -->
+<section id="lichlam" class="page">
+    <h1>🗓️ Lịch làm việc</h1>
 
-        <!-- SƠ YẾU LÝ LỊCH -->
-        <section id="syll" class="page">
-            <h1>🧍 Sơ yếu lý lịch</h1>
-            <div class="form">
-                <input id="syMa" type="text" placeholder="Mã số riêng">
-                <input id="syHoTen" type="text" placeholder="Họ tên">
-                <input id="syNgaySinh" type="date" placeholder="Ngày sinh">
-                <input id="syGioiTinh" type="text" placeholder="Giới tính">
-                <input id="syNoiSinh" type="text" placeholder="Nơi sinh">
-                <input id="syQueQuan" type="text" placeholder="Quê quán">
-                <input id="syDonVi" type="text" placeholder="Đơn vị công tác">
-                <input id="syNgayVaoDang" type="date" placeholder="Ngày vào Đảng">
-                <button class="btn" onclick="saveSYLL()">Lưu</button>
-            </div>
-            <div id="syllStatus" class="status"></div>
-        </section>
-
-        <!-- ĐÀO TẠO -->
-        <section id="daotao" class="page">
-            <h1>🎓 Chương trình đào tạo</h1>
-            <div class="grid">
-                <div class="card">Chuyên viên</div>
-                <div class="card">Cán bộ</div>
-                <div class="card">Cán bộ cao cấp</div>
-            </div>
-        </section>
-
-        <!-- VĂN BẢN -->
-        <section id="vanban" class="page">
-            <h1>📄 Văn bản</h1>
-
-            <div class="form">
-                <select id="vbLoai">
-                    <option value="Đến">Đến</option>
-                    <option value="Đi">Đi</option>
-                </select>
-                <input id="vbSo" type="text" placeholder="Số hiệu">
-                <input id="vbNgay" type="date">
-                <input id="vbFile" type="text" placeholder="Link PDF (tạm)">
-                <button class="btn" onclick="addVanBan()">Thêm văn bản</button>
-            </div>
-
-            <table class="table" id="vanbanTable"></table>
-        </section>
-
-        <!-- LỊCH LÀM VIỆC -->
-        <section id="lichlam" class="page">
-            <h1>🗓️ Lịch làm việc</h1>
-
-            <div class="form">
-                <input id="llNgay" type="date">
-                <input id="llNoiDung" type="text" placeholder="Nội dung">
-                <input id="llGhiChu" type="text" placeholder="Ghi chú (tùy chọn)">
-                <button class="btn" onclick="addLich()">Thêm lịch</button>
-            </div>
-
-            <table class="table" id="lichTable"></table>
-        </section>
-
-        <!-- KHEN THƯỞNG -->
-        <section id="khenthuong" class="page">
-            <h1>🏅 Khen thưởng - Kỷ luật</h1>
-
-            <div class="form">
-<input id="ktTen" type="text" placeholder="Tên">
-                <select id="ktLoai">
-                    <option value="Khen thưởng">Khen thưởng</option>
-                    <option value="Kỷ luật">Kỷ luật</option>
-                </select>
-                <input id="ktNgay" type="date">
-                <select id="ktTrangThai">
-                    <option value="Đã duyệt">Đã duyệt</option>
-                    <option value="Chưa duyệt">Chưa duyệt</option>
-                </select>
-                <button class="btn" onclick="addKT()">Thêm</button>
-            </div>
-
-            <table class="table" id="ktTable"></table>
-        </section>
-
+    <div class="form">
+        <input id="llNgay" type="date">
+        <input id="llNoiDung" type="text" placeholder="Nội dung">
+        <input id="llGhiChu" type="text" placeholder="Ghi chú (tùy chọn)">
+        <button class="btn" onclick="addLich()">Thêm lịch</button>
     </div>
+
+    <table class="table" id="lichTable"></table>
+</section>
+
+<!-- KHEN THƯỞNG -->
+<section id="khenthuong" class="page">
+    <h1>🏅 Khen thưởng - Kỷ luật</h1>
+
+    <div class="form">
+        <input id="ktTen" type="text" placeholder="Tên">
+        <select id="ktLoai">
+            <option value="Khen thưởng">Khen thưởng</option>
+            <option value="Kỷ luật">Kỷ luật</option>
+        </select>
+        <input id="ktNgay" type="date">
+        <select id="ktTrangThai">
+            <option value="Đã duyệt">Đã duyệt</option>
+            <option value="Chưa duyệt">Chưa duyệt</option>
+        </select>
+        <button class="btn" onclick="addKT()">Thêm</button>
+    </div>
+
+    <table class="table" id="ktTable"></table>
+</section>
+
+</div>
 </div>
 
 <script>
-// ========= CHUYỂN TRANG =========
+// CHUYỂN TRANG
 function showPage(id){
     document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
     document.getElementById(id).classList.add("active");
@@ -218,105 +154,154 @@ function showPage(id){
     document.getElementById("btn-"+id).classList.add("active");
 }
 
-// ========= SƠ YẾU LÝ LỊCH =========
-const syMa          = document.getElementById("syMa");
-const syHoTen       = document.getElementById("syHoTen");
-const syNgaySinh    = document.getElementById("syNgaySinh");
-const syGioiTinh    = document.getElementById("syGioiTinh");
-const syNoiSinh     = document.getElementById("syNoiSinh");
-const syQueQuan     = document.getElementById("syQueQuan");
-const syDonVi       = document.getElementById("syDonVi");
-const syNgayVaoDang = document.getElementById("syNgayVaoDang");
-const syllStatus    = document.getElementById("syllStatus");
-
-let syll = null;
-
-function loadSYLL(){
-    const data = localStorage.getItem("syll");
-    if(!data) return;
-    syll = JSON.parse(data);
-
-    syMa.value          = syll.ma          || "";
-    syHoTen.value       = syll.hoTen       || "";
-    syNgaySinh.value    = syll.ngaySinh    || "";
-    syGioiTinh.value    = syll.gioiTinh    || "";
-    syNoiSinh.value     = syll.noiSinh     || "";
-    syQueQuan.value     = syll.queQuan     || "";
-    syDonVi.value       = syll.donVi       || "";
-    syNgayVaoDang.value = syll.ngayVaoDang || "";
-
-    syllStatus.textContent = "Đã tải thông tin đã lưu";
-}
-
-function saveSYLL(){
-    syll = {
-        ma:          syMa.value,
-        hoTen:       syHoTen.value,
-        ngaySinh:    syNgaySinh.value,
-        gioiTinh:    syGioiTinh.value,
-        noiSinh:     syNoiSinh.value,
-        queQuan:     syQueQuan.value,
-        donVi:       syDonVi.value,
-        ngayVaoDang: syNgayVaoDang.value
-    };
-    localStorage.setItem("syll", JSON.stringify(syll));
-    syllStatus.textContent = "Đã lưu";
-    syllStatus.style.color = "#2e7d32";
-}
-
-// ========= LỊCH LÀM VIỆC =========
-const llNgay    = document.getElementById("llNgay");
-const llNoiDung = document.getElementById("llNoiDung");
-const llGhiChu  = document.getElementById("llGhiChu");
-const lichTable = document.getElementById("lichTable");
-
-let lich = JSON.parse(localStorage.getItem("lich") || "[]");
+// ----------- LỊCH LÀM VIỆC -----------
+let lich = JSON.parse(localStorage.getItem("lich")||"[]");
 
 function renderLich(){
-    let t = "<tr><th>Ngày</th><th>Nội dung</th><th>Ghi chú</th><th>Hành động</th></tr>";
+    let t = `<tr><th>Ngày</th><th>Nội dung</th><th>Ghi chú</th><th>Hành động</th></tr>`;
     lich.forEach((x,i)=>{
         t += `
         <tr>
             <td>${x.ngay}</td>
             <td>${x.nd}</td>
-            <td>${x.gc}</td>
+<td>${x.gc}</td>
             <td class="action-btns">
                 <button class="btn-small" onclick="editLich(${i})">Sửa</button>
                 <button class="btn-small" onclick="deleteLich(${i})">Xóa</button>
             </td>
         </tr>`;
     });
-    lichTable.innerHTML = t;
+    document.getElementById("lichTable").innerHTML = t;
 }
 
 function addLich(){
-    const ngay = llNgay.value;
-    const nd   = llNoiDung.value;
-    const gc   = llGhiChu.value;
-    if(!ngay || !nd) return;
+    let ngay = llNgay.value;
+    let nd = llNoiDung.value;
+    let gc = llGhiChu.value;
     lich.push({ngay, nd, gc});
-    localStorage.setItem("lich", JSON.stringify(lich));
+    localStorage.setItem("lich",JSON.stringify(lich));
     renderLich();
-    llNgay.value = "";
-    llNoiDung.value = "";
-    llGhiChu.value = "";
 }
 
 function editLich(i){
-    const x = lich[i];
-    llNgay.value    = x.ngay;
+    let x = lich[i];
+    llNgay.value = x.ngay;
     llNoiDung.value = x.nd;
-    llGhiChu.value  = x.gc;
+    llGhiChu.value = x.gc;
     lich.splice(i,1);
-    localStorage.setItem("lich", JSON.stringify(lich));
+    localStorage.setItem("lich",JSON.stringify(lich));
     renderLich();
 }
 
 function deleteLich(i){
     lich.splice(i,1);
-    localStorage.setItem("lich", JSON.stringify(lich));
+    localStorage.setItem("lich",JSON.stringify(lich));
     renderLich();
 }
 
-// ========= VĂN BẢN =========
-const vbLoai
+// ----------- VĂN BẢN -----------
+let vb = JSON.parse(localStorage.getItem("vb")||"[]");
+
+function renderVB(){
+    let t = `<tr><th>Loại</th><th>Số hiệu</th><th>Ngày</th><th>File</th><th>Hành động</th></tr>`;
+    vb.forEach((x,i)=>{
+        t += `
+        <tr>
+            <td>${x.loai}</td>
+            <td>${x.so}</td>
+            <td>${x.ngay}</td>
+            <td><a href="${x.file}" target="_blank">PDF</a></td>
+            <td>
+                <button class="btn-small" onclick="editVB(${i})">Sửa</button>
+                <button class="btn-small" onclick="deleteVB(${i})">Xóa</button>
+            </td>
+        </tr>`;
+    });
+    document.getElementById("vanbanTable").innerHTML = t;
+}
+
+function addVanBan(){
+    vb.push({
+        loai: vbLoai.value,
+        so: vbSo.value,
+        ngay: vbNgay.value,
+        file: vbFile.value
+    });
+    localStorage.setItem("vb",JSON.stringify(vb));
+    renderVB();
+}
+
+function editVB(i){
+    let x = vb[i];
+    vbLoai.value = x.loai;
+    vbSo.value = x.so;
+    vbNgay.value = x.ngay;
+    vbFile.value = x.file;
+    vb.splice(i,1);
+    localStorage.setItem("vb",JSON.stringify(vb));
+    renderVB();
+}
+
+function deleteVB(i){
+    vb.splice(i,1);
+    localStorage.setItem("vb",JSON.stringify(vb));
+    renderVB();
+}
+
+// ----------- KHEN THƯỞNG -----------
+let kt = JSON.parse(localStorage.getItem("kt")||"[]");
+
+function renderKT(){
+    let t = `<tr><th>Tên</th><th>Loại</th><th>Ngày</th><th>Trạng thái</th><th>Hành động</th></tr>`;
+    kt.forEach((x,i)=>{
+        t += `
+        <tr>
+            <td>${x.ten}</td>
+            <td>${x.loai}</td>
+            <td>${x.ngay}</td>
+            <td>${x.tt}</td>
+            <td>
+                <button class="btn-small" onclick="editKT(${i})">Sửa</button>
+                <button class="btn-small" onclick="deleteKT(${i})">Xóa</button>
+            </td>
+        </tr>`;
+    });
+    document.getElementById("ktTable").innerHTML = t;
+}
+
+function addKT(){
+    kt.push({
+        ten: ktTen.value,
+        loai: ktLoai.value,
+        ngay: ktNgay.value,
+        tt: ktTrangThai.value
+    });
+localStorage.setItem("kt",JSON.stringify(kt));
+    renderKT();
+}
+
+function editKT(i){
+    let x = kt[i];
+    ktTen.value = x.ten;
+    ktLoai.value = x.loai;
+    ktNgay.value = x.ngay;
+    ktTrangThai.value = x.tt;
+    kt.splice(i,1);
+    localStorage.setItem("kt",JSON.stringify(kt));
+    renderKT();
+}
+
+function deleteKT(i){
+    kt.splice(i,1);
+    localStorage.setItem("kt",JSON.stringify(kt));
+    renderKT();
+}
+
+// Khởi tạo bảng
+renderLich();
+renderVB();
+renderKT();
+</script>
+
+</body>
+</html>
